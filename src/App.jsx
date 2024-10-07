@@ -1,3 +1,12 @@
-export default function App() {
-  return <h1 className="text-3xl">h</h1>;
-}
+import React from "react";
+import HomeLayout from "./components/Home/HomeLayout";
+
+const App = () => {
+  return (
+    <div className="bg-blue-950">
+      <HomeLayout />
+    </div>
+  );
+};
+
+export default App;
