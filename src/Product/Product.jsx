@@ -72,25 +72,25 @@ const Product = () => {
     <section>
       <div className="relative">
         <img src={logo} alt="Logo" className="w-full" />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center ">
           <img
             src="https://ugc.production.linktr.ee/721e0bcc-2bac-4276-b0eb-fbf98850c24b_341003461-131759759779160-525686003715477474-n.jpeg?io=true&size=avatar-v3_0"
             alt="Centered Image"
-            className="mt-20 w-20 md:w-56 rounded-full md:mt-[50vh] border-4 border-blue-500 md:p-1" // Added border classes
+            className="mt-24 md:w-20 w-36 rounded-full md:mt-[50vh] border-4 border-blue-500 md:p-1" // Added border classes
           />
         </div>
       </div>
 
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <Lottie
           animationData={animeData}
           loop={true}
           autoplay={true}
           className="w-36 mt-3  md:w-48 md:mt-20"
         />
-      </div>
+      </div> */}
       <div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-12">
           <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
             {dryFruites.map((data, index) => (
               <div
