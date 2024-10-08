@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Lottie from "lottie-react";
 import "react-toastify/dist/ReactToastify.css";
 import logo from "../assets/banner.jpg";
-import animeData from '../animefiles/Animation - 1728380477993.json'
+import animeData from "../animefiles/Animation - 1728380477993.json";
 const MAX_PRODUCTS = 6;
 
 const Product = () => {
@@ -71,23 +71,23 @@ const Product = () => {
   return (
     <section>
       <div className="relative">
-        <img src={logo} alt="Logo" className="w-full " />
+        <img src={logo} alt="Logo" className="w-full" />
         <div className="absolute inset-0 flex items-center justify-center">
           <img
             src="https://ugc.production.linktr.ee/721e0bcc-2bac-4276-b0eb-fbf98850c24b_341003461-131759759779160-525686003715477474-n.jpeg?io=true&size=avatar-v3_0"
             alt="Centered Image"
-            className="w-20 md:w-56 rounded-full mt-[50vh] "
+            className="mt-20 w-20 md:w-56 rounded-full md:mt-[50vh] border-4 border-blue-500 md:p-1" // Added border classes
           />
         </div>
       </div>
 
       <div className="flex justify-center">
-      <Lottie
-            animationData={animeData}
-            loop={true}
-            autoplay={true}
-            className="w-48 mt-20"
-          />
+        <Lottie
+          animationData={animeData}
+          loop={true}
+          autoplay={true}
+          className="w-36 mt-3  md:w-48 md:mt-20"
+        />
       </div>
       <div>
         <div className="flex justify-center">
