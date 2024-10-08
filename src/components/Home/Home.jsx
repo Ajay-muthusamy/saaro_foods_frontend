@@ -1,8 +1,10 @@
 import React from "react";
 import Lottie from "lottie-react";
+import { useNavigate } from "react-router-dom";
 import animationData from "../../animefiles/Animation - 1728323934657.json";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <main
@@ -16,7 +18,11 @@ const Home = () => {
           </h2>
           <p className="text-center md:text-left ps-2 text-sm text-rose-400">
             Freshly made sweets delivered to your doorstep!
-          </p>
+            </p>
+          <button className="shop-now-btn text-white py-3 px-8 rounded-full text-lg font-semibold transform transition duration-300 ease-in-out hover:scale-110 hover:shadow-lg focus:outline-none animated-gradient mt-5" onClick={()=>navigate('/shop-now')}>
+            Shop Now
+          </button>
+
         </div>
         <div>
           <Lottie
@@ -32,3 +38,4 @@ const Home = () => {
 };
 
 export default Home;
+      
