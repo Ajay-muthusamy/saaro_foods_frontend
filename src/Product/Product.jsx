@@ -95,7 +95,7 @@ const Product = () => {
             {dryFruites.map((data, index) => (
               <div
                 key={index}
-                className="flex  items-center p-4 border rounded shadow-md space-x-4"
+                className="flex  items-center p-4 border-2 rounded space-x-4"
               >
                 <img
                   src={data.img}
@@ -112,7 +112,7 @@ const Product = () => {
                   </div>
                   <div>
                     <button
-                      className="bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-500 text-white font-semibold rounded-lg mt-3 px-16 py-2 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                      className="bg-green-500 text-white hover:bg-green-300 font-semibold py-2 px-16 rounded-full "
                       onClick={() => DataHandle(data)}
                     >
                       Add
