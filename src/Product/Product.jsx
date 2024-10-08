@@ -76,7 +76,7 @@ const Product = () => {
           <img
             src="https://ugc.production.linktr.ee/721e0bcc-2bac-4276-b0eb-fbf98850c24b_341003461-131759759779160-525686003715477474-n.jpeg?io=true&size=avatar-v3_0"
             alt="Centered Image"
-            className="w-20 md:w-56 rounded-full  "
+            className="w-20 md:w-56 rounded-full mt-[50vh] "
           />
         </div>
       </div>
@@ -86,7 +86,7 @@ const Product = () => {
             animationData={animeData}
             loop={true}
             autoplay={true}
-            className="w-48"
+            className="w-48 mt-20"
           />
       </div>
       <div>
