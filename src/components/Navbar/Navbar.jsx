@@ -5,9 +5,9 @@ const Navbar = () => {
   return (
     <div>
       <nav className="font-abc shadow-md ">
-        <ul className="flex justify-between text-lg md:text-xl py-4">
+        <ul className="flex justify-between text-lg md:text-xl py-4 items-center">
           <li className="md:ml-20 ml-5">
-            <h1>Logo</h1>
+            <img src="https://ugc.production.linktr.ee/721e0bcc-2bac-4276-b0eb-fbf98850c24b_341003461-131759759779160-525686003715477474-n.jpeg?io=true&size=avatar-v3_0" alt=""  className="w-14" />
           </li>
           <li className="flex gap-3 md:mr-20 mr-5">
             <IoMdCall className="mt-0 h-7 w-7" />

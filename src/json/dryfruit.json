@@ -1,75 +1,76 @@
 [
     {
+        "title":"Arabian Black Dates 250g",
+        "img":"https://content.jdmagicbox.com/rep/b2b/black-date/black-date-7.jpg?impolicy=queryparam&im=Resize=(360,360),aspect=fit",
+        "price":130,
+        "stock":true
+
+    },
+    {
         "title":"Almonds 250g",
-        "img":"",
-        "price":20,
+        "img":"https://tse2.mm.bing.net/th?id=OIP.KCUewIhJxFw9mF1RFdxHjwHaE8&pid=Api&P=0&h=180",
+        "price":300,
         "stock":true
 
     },
     {
         "title":"Black Dry Grapes 250g",
-        "img":"",
-        "price":20,
-        "stock":true
-    },
-    {
-        "title":"Black Dates 250g",
-        "img":"",
-        "price":20,
+        "img":"https://www.verywellfit.com/thmb/4bomU_FllAm-OlICUZOkzoOxJSk=/2116x1416/filters:fill(FFDB5D,1)/DriedfruitRosetteJordaan-5b2322db954f4a6b8986bc4e722351e1.jpg",
+        "price":170,
         "stock":true
     },
     {
         "title":"Cashewnuts 250g",
-        "img":"",
-        "price":20,
+        "img":"https://res.cloudinary.com/farmlisty/image/upload/f_auto,q_auto/v1585830552/maxresdefault.jpg",
+        "price":280,
         "stock":true
     },
     {
         "title":"Dry Grapes 250g",
-        "img":"",
-        "price":20,
+        "img":"https://spicerackindia.com/wp-content/uploads/2020/11/grapes2.jpg",
+        "price":150,
         "stock":true
     },
     {
-        "title":"Sliced Dry Figs 250g",
-        "img":"",
-        "price":20,
+        "title":"Dry Fig Sliced 250g",
+        "img":"https://moonandspoonandyum.com/wp-content/uploads/2022/11/drying-figs-3.jpg",
+        "price":450,
         "stock":true
     },
     {
-        "title":"Dry Amla 250g",
-        "img":"",
-        "price":20,
+        "title":"Honey Dry Fruits 500g",
+        "img":"https://www.hyderabadiruchulu.com/wp-content/uploads/2019/11/Dry-Fruits-With-Honey.jpg",
+        "price":500,
+        "stock":true
+    },
+    {
+        "title":"Honey Figs 500g",
+        "img":"https://images.eatsmarter.com/sites/default/files/styles/max_size/public/honey-figs-with-mascarpone-528272.jpg",
+        "price":500,
+        "stock":true
+    },
+    {
+        "title":"Karonda Candy 300g",
+        "img":"https://m.media-amazon.com/images/I/51VOp8IduZL.jpg",
+        "price":140,
+        "stock":true
+    },
+    {
+        "title":"Mix Nuts 250g ",
+        "img":"https://www.hcisnacksolutions.com/wp-content/uploads/2018/03/TRAIL_MIX_NUTS.jpg",
+        "price":350,
         "stock":true
     },
     {
         "title":"Pistha Salted 250g",
-        "img":"",
-        "price":20,
-        "stock":true
-    },
-    {
-        "title":"Pistha Green 250g",
-        "img":"",
-        "price":20,
-        "stock":true
-    },
-    {
-        "title":"Kiwi 250g",
-        "img":"",
-        "price":20,
+        "img":"https://dryfruitsmandy.com/wp-content/uploads/2021/02/pista-saled-supreme.jpg",
+        "price":450,
         "stock":true
     },
     {
         "title":"Walnut 150g",
-        "img":"",
-        "price":20,
+        "img":"https://wallpapercave.com/wp/wp4198229.jpg",
+        "price":150,
         "stock":true
-    },
-    {
-        "title":"Apricot 250g",
-        "img":"",
-        "price":20,
-        "stock":false
     }
 ]

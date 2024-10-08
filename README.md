@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 
 dependencies to be installed;
 # npm i react-router-dom
+# npm install framer-motion
