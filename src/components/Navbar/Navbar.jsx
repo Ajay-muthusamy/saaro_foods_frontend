@@ -4,7 +4,7 @@ import { IoMdCall } from "react-icons/io";
 const Navbar = () => {
   return (
     <div>
-      <nav className="bg-[#C11900] text-[#FFDB00] font-abc">
+      <nav className="font-abc shadow-md ">
         <ul className="flex justify-between text-lg md:text-xl py-4">
           <li className="md:ml-20 ml-5">
             <h1>Logo</h1>

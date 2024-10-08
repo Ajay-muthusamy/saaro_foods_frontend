@@ -1,48 +1,22 @@
-import React, { useEffect, useState } from "react";
-import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
-
+import React from "react";
+import Lottie from "lottie-react";
+import animationData from "../../animefiles/Animation - 1728323934657.json";
 const Home = () => {
-  const [sliderHeight, setSliderHeight] = useState("30%");
-
-  const updateSliderHeight = () => {
-    if (window.innerWidth < 768) {
-      setSliderHeight("22%"); // Height for mobile
-    } else {
-      setSliderHeight("30%"); // Height for desktop
-    }
-  };
-
-  useEffect(() => {
-    // Set initial slider height
-    updateSliderHeight();
-
-    // Add resize event listener
-    window.addEventListener("resize", updateSliderHeight);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", updateSliderHeight);
-    };
-  }, []);
-
   return (
-    <div className="slider-container bg-white z-20">
-      <main>
-        <AwesomeSlider style={{ "--slider-height-percentage": sliderHeight }}>
-          <div>
-            <img
-              src="https://www.sweetkadai.com/modules/labslideshow/images/e93e19c882cfa5cb4914ba9af1e7547516de2699_Sweetkadai-banner.jpg"
-              alt="Sweetkadai Banner"
-            />
-          </div>
-          <div>
-            <img
-              src="https://www.sweetkadai.com/modules/labslideshow/images/92901021a8c3cb2ade4a7c068be7b235478a39e6_Diwali-utsav.jpg"
-              alt="Diwali Utsav"
-            />
-          </div>
-        </AwesomeSlider>
+    <div>
+      <main className="flex-col md:flex-row flex items-center justify-center space-x-9 " id="home">
+        <div className="font-ubuntu ">
+          <h2 className="text-[6vh] leading-[9vh] mt-3 x w-[50vh] text-center md:text-left md:text-[8vh] md:w-[70vh] md:leading-[10vh]">Indulge in the Sweetest <span className="text-rose-400">Delights</span></h2>
+          <p className="text-center md:text-left ps-2 text-sm text-rose-400">Freshly made sweets delivered to your doorstep!</p>
+        </div>
+        <div>
+          <Lottie
+            animationData={animationData}
+            loop={true}
+            autoplay={true}
+            className="w-96 md:w-[90vh]"
+          />
+        </div>
       </main>
     </div>
   );

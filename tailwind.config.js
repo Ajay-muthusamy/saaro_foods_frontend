@@ -8,6 +8,7 @@ export default {
     extend: {},
     fontFamily: {
       abc: ["Rubik","sans-serif"],
+      ubuntu:["Ubuntu","sans-serif"]
     },
   },
   plugins: [],
