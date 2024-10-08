@@ -1,0 +1,32 @@
+/* Custom styles for AwesomeSlider bullets */
+.aws-bullets {
+  bottom: 10px; /* Position bullets above the bottom of the slider */
+}
+
+.aws-bullets button {
+  width: 10px; /* Initial width of the bullet */
+  height: 10px; /* Initial height of the bullet */
+  border-radius: 50%; /* Make them round */
+  margin: 0 5px; /* Space between bullets */
+  background-color: #ccc; /* Default bullet color */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Adjust bullet size based on slider height */
+.aws-bullets button {
+  width: calc(10px * var(--slider-height-percentage)); /* Size based on height */
+  height: calc(10px * var(--slider-height-percentage)); /* Size based on height */
+}
+
+/* Style for the active bullet */
+.aws-bullets button.active {
+  background-color: #007bff; /* Color for the active bullet */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aws-bullets button {
+    width: 8px; /* Smaller bullet for mobile */
+    height: 8px; /* Smaller bullet for mobile */
+  }
+}

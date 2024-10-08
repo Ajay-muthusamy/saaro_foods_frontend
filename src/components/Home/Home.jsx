@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
+import "./home.css"; // Import your custom styles
 
 const Home = () => {
   const [sliderHeight, setSliderHeight] = useState("30%");
