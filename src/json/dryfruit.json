@@ -3,73 +3,73 @@
         "title":"Almonds 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
 
     },
     {
         "title":"Black Dry Grapes 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
     },
     {
         "title":"Black Dates 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
     },
     {
         "title":"Cashewnuts 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
     },
     {
         "title":"Dry Grapes 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
     },
     {
         "title":"Sliced Dry Figs 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
     },
     {
         "title":"Dry Amla 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
     },
     {
         "title":"Pistha Salted 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
     },
     {
         "title":"Pistha Green 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
     },
     {
         "title":"Kiwi 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
     },
     {
         "title":"Walnut 150g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":true
     },
     {
         "title":"Apricot 250g",
         "img":"",
         "price":20,
-        "stock":"false"
+        "stock":false
     }
 ]
