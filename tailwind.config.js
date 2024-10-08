@@ -7,8 +7,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      abc: ["Rubik","sans-serif"],
-      ubuntu:["Ubuntu","sans-serif"]
+      poppins: ['Poppins', 'sans-serif'],
     },
   },
   plugins: [],
