@@ -33,7 +33,7 @@ const Home = () => {
             animationData={animationData}
             loop={true}
             autoplay={true}
-            className="w-[41vh] md:w-[90vh] mb-20"
+            className="w-[36vh] md:w-[90vh] mb-20 mt-3"
           />
         </div>
       </main>
