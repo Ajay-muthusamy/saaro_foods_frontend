@@ -76,7 +76,7 @@ const Product = () => {
           <img
             src="https://ugc.production.linktr.ee/721e0bcc-2bac-4276-b0eb-fbf98850c24b_341003461-131759759779160-525686003715477474-n.jpeg?io=true&size=avatar-v3_0"
             alt="Centered Image"
-            className="mt-24 md:w-20 w-36 rounded-full md:mt-[50vh] border-4 border-blue-500 md:p-1" // Added border classes
+            className="mt-[17vh] w-36 md:w-60 rounded-full md:mt-[55vh] border-4 border-blue-500 md:p-1" // Added border classes
           />
         </div>
       </div>
@@ -90,7 +90,7 @@ const Product = () => {
         />
       </div> */}
       <div>
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-14 md:mt-28">
           <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
             {dryFruites.map((data, index) => (
               <div
