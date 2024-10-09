@@ -91,7 +91,7 @@ const OrderForm = ({ isOpen, onClose, products, total }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 font-poppins">
       <div className="bg-white p-6 rounded-lg shadow-lg w-96">
         <h2 className="text-lg font-semibold mb-4">Place Your Order</h2>
         <form onSubmit={handleSubmit}>
@@ -185,7 +185,7 @@ const PreviewOrder = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+    <div className="p-6 bg-gray-100 rounded-lg shadow-lg font-poppins">
       <h2 className="text-2xl font-semibold text-center mb-4">
         Preview Your Sweet Box
       </h2>

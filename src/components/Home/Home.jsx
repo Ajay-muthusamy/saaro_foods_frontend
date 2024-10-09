@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       <main
-        className="flex-col md:flex-row flex items-center justify-center space-x-9 "
+        className="flex-col md:flex-row flex items-center justify-center space-x-9 font-poppins"
         id="home"
       >
         <div className="font-ubuntu ">
