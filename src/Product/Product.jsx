@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import dryFruites from "../json/dryfruit.json";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addProduct } from "../slice/ProductSlice";
 import OrderButton from "../components/button/OrderButton";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import Lottie from "lottie-react";
 import "react-toastify/dist/ReactToastify.css";
-import logo from "../assets/banner.jpg";
-import animeData from "../animefiles/Animation - 1728380477993.json";
+import banner from '../assets/banner.png'
+import logo from '../assets/logo.jpg'
+
 const MAX_PRODUCTS = 6;
 
 const Product = () => {
@@ -17,10 +17,10 @@ const Product = () => {
 
   const [open, setOpen] = useState(false);
   const [image, setImage] = useState(null);
-  const [products, productsData] = useState([]);
+  const [products, setProducts] = useState([]);
   const [alertOpen, setAlertOpen] = useState(false);
-
-  const [total, settotal] = useState(0);
+  const [total, setTotal] = useState(0);
+  const [productQuantities, setProductQuantities] = useState({});
 
   const handleOpenModal = (data) => {
     setImage(data);
@@ -41,8 +41,15 @@ const Product = () => {
       setAlertOpen(true);
       return;
     }
-    productsData((prevProducts) => [...prevProducts, data]);
-    settotal((prevTotal) => prevTotal + data.price);
+
+    setProducts((prevProducts) => [...prevProducts, data]);
+    setTotal((prevTotal) => prevTotal + data.price);
+
+    setProductQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [data.title]: (prevQuantities[data.title] || 0) + 1,
+    }));
+
     dispatch(addProduct(data));
     toast.success(`${data.title} added successfully!`, {
       position: "top-right",
@@ -53,11 +60,6 @@ const Product = () => {
       draggable: true,
       progress: undefined,
     });
-  };
-
-  const finalData = {
-    products,
-    total,
   };
 
   const handleSubmit = () => {
@@ -71,31 +73,23 @@ const Product = () => {
   return (
     <section>
       <div className="relative">
-        <img src={logo} alt="Logo" className="w-full" />
-        <div className="absolute inset-0 flex items-center justify-center ">
+        <img src={banner} alt="Logo" className="w-full" />
+        <div className="absolute inset-0 flex items-center justify-center">
           <img
-            src="https://ugc.production.linktr.ee/721e0bcc-2bac-4276-b0eb-fbf98850c24b_341003461-131759759779160-525686003715477474-n.jpeg?io=true&size=avatar-v3_0"
+            src={logo}
             alt="Centered Image"
-            className="mt-[17vh] w-36 md:w-60 rounded-full md:mt-[55vh] border-4 border-blue-500 md:p-1" // Added border classes
+            className="mt-[17vh] w-28 md:w-52 rounded-full md:mt-[48vh] border-4 border-blue-500 md:p-1"
           />
         </div>
       </div>
 
-      {/* <div className="flex justify-center">
-        <Lottie
-          animationData={animeData}
-          loop={true}
-          autoplay={true}
-          className="w-36 mt-3  md:w-48 md:mt-20"
-        />
-      </div> */}
       <div>
         <div className="flex justify-center mt-20 md:mt-28 font-poppins">
           <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
             {dryFruites.map((data, index) => (
               <div
                 key={index}
-                className="flex  items-center p-4 border-2 rounded space-x-4"
+                className="flex items-center p-4 border-2 rounded space-x-4"
               >
                 <img
                   src={data.img}
@@ -103,23 +97,24 @@ const Product = () => {
                   className="w-32 h-32 object-cover mb-4 rounded-lg"
                   onClick={() => handleOpenModal(data)}
                 />
-                <div className="">
-                  <div>
-                    <h1 className="text-lg font-semibold mb-2">{data.title}</h1>
-                    <h1 className="text-md font-medium mb-2">
-                      Price:₹ {data.price}
-                    </h1>
-                  </div>
-                  <div>
+                <div>
+                  <h1 className="text-lg font-semibold mb-2">{data.title}</h1>
+                  <h1 className="text-md font-medium mb-2">Price: ₹{data.price}</h1>
+
+                  <div className="flex space-x-10 items-center rounded-lg">
                     <button
-                      className="bg-green-500 text-white hover:bg-green-300 font-semibold py-2 px-16 rounded-full "
+                      className="bg-green-500 text-white hover:bg-green-300 font-semibold py-2 px-12 rounded-full"
                       onClick={() => DataHandle(data)}
                     >
                       Add
                     </button>
+                    <div>
+                      <h1 className="bg-green-500 px-5 py-2 rounded-full text-white">
+                        {productQuantities[data.title] || 0}
+                      </h1>
+                    </div>
                   </div>
                 </div>
-
                 {!data.stock ? (
                   <span className="text-red-500">Out of stock</span>
                 ) : (
@@ -134,7 +129,7 @@ const Product = () => {
       {open && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-          onClick={() => setOpen(false)}
+          onClick={handleCloseModal}
         >
           <div className="bg-white p-6 rounded-lg shadow-lg relative">
             <button

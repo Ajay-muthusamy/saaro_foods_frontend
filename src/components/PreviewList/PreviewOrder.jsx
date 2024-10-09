@@ -50,7 +50,6 @@ const OrderForm = ({ isOpen, onClose, products, total }) => {
       products,
       total,
     };
-
     try {
       const response = await axios.post(
         "https://saroma-foods-backend-1.onrender.com/saarofoods/customer-order",
