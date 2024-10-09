@@ -90,7 +90,7 @@ const OrderForm = ({ isOpen, onClose, products, total }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 font-poppins">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 font-rubik">
       <div className="bg-white p-6 rounded-lg shadow-lg w-96">
         <h2 className="text-lg font-semibold mb-4">Place Your Order</h2>
         <form onSubmit={handleSubmit}>

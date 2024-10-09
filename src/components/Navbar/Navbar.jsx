@@ -1,6 +1,6 @@
 import React from "react";
 import logo from '../../assets/logo.jpg';
-import { IoMdCall } from "react-icons/io";
+
 
 const Navbar = () => {
   return (
@@ -12,7 +12,7 @@ const Navbar = () => {
           </li>
           <li className="flex gap-3 md:mr-20 mr-5 text-sm">
          
-            <h1 className="text-sm">+91-98765 43210</h1>
+            <h1 className="text-sm font-semibold">+91 99422 08824</h1>
           </li>
         </ul>
       </nav>
