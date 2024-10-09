@@ -101,9 +101,9 @@ const Product = () => {
                   <h1 className="text-lg font-semibold mb-2">{data.title}</h1>
                   <h1 className="text-md font-medium mb-2">Price: ₹{data.price}</h1>
 
-                  <div className="flex space-x-10 items-center rounded-lg">
+                  <div className="flex space-x-2 items-center rounded-lg">
                     <button
-                      className="bg-green-500 text-white hover:bg-green-300 font-semibold py-2 px-12 rounded-full"
+                      className="bg-green-500 text-white hover:bg-green-300 font-semibold py-2 px-10 rounded-full"
                       onClick={() => DataHandle(data)}
                     >
                       Add
