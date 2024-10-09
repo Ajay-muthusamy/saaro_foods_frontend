@@ -8,6 +8,7 @@ export default {
     extend: {},
     fontFamily: {
       poppins: ['Poppins', 'sans-serif'],
+      rubik: ['Rubik', 'sans-serif'],
     },
   },
   plugins: [],

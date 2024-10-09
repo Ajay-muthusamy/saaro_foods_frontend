@@ -84,7 +84,7 @@ const Product = () => {
       </div>
 
       <div>
-        <div className="flex justify-center mt-20 md:mt-28 font-poppins">
+        <div className="flex justify-center mt-20 md:mt-28 font-rubik">
           <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
             {dryFruites.map((data, index) => (
               <div
