@@ -16,25 +16,24 @@ import karondacandy from "../assets/karondacandy.png";
 import mixednuts from "../assets/mixednuts.png";
 import pista from "../assets/pista.png";
 import walnut from "../assets/walnut.png";
+import almond from "../assets/almond.png";
+import blackgraps from "../assets/blackgraps.png";
+import greenpista from "../assets/GREENPISTA.png";
+import imamla from "../assets/imAMLA.png";
+
 
 const MAX_PRODUCTS = 6;
 
 const dryFruites = [
   {
-    title: "Arabian Black Dates 250g",
-    img: dates,
-    price: 130,
-    stock: true,
-  },
-  {
     title: "Almonds 250g",
-    img: "https://tse2.mm.bing.net/th?id=OIP.KCUewIhJxFw9mF1RFdxHjwHaE8&pid=Api&P=0&h=180",
+    img: almond,
     price: 300,
     stock: true,
   },
   {
     title: "Black Dry Grapes 250g",
-    img: "https://www.verywellfit.com/thmb/4bomU_FllAm-OlICUZOkzoOxJSk=/2116x1416/filters:fill(FFDB5D,1)/DriedfruitRosetteJordaan-5b2322db954f4a6b8986bc4e722351e1.jpg",
+    img:blackgraps,
     price: 170,
     stock: true,
   },
@@ -51,20 +50,8 @@ const dryFruites = [
     stock: true,
   },
   {
-    title: "Dry Fig Sliced 250g",
-    img: fig,
-    price: 450,
-    stock: true,
-  },
-  {
     title: "Honey Dry Fruits 500g",
     img: honeydryfruits,
-    price: 500,
-    stock: true,
-  },
-  {
-    title: "Honey Figs 500g",
-    img: "https://images.eatsmarter.com/sites/default/files/styles/max_size/public/honey-figs-with-mascarpone-528272.jpg",
     price: 500,
     stock: true,
   },
@@ -87,9 +74,21 @@ const dryFruites = [
     stock: true,
   },
   {
+    title: "Pistha green 250g",
+    img: greenpista,
+    price: 450,
+    stock: true,
+  },
+  {
     title: "Walnut 150g",
     img: walnut,
     price: 150,
+    stock: true,
+  },
+  {
+    title: "Sliced Dry figs 250g",
+    img: fig,
+    price: 450,
     stock: true,
   },
 ];
