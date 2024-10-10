@@ -22,6 +22,7 @@ import greenpista from "../assets/GREENPISTA.png";
 import imamla from "../assets/imAMLA.png";
 import amla from "../assets/AMLA.png";
 import apricut from "../assets/APRICUT.png";
+import honeyfig from "../assets/honeyfig.png";
 
 
 const MAX_PRODUCTS = 6;
@@ -42,7 +43,7 @@ const dryFruites = [
   {
     title: "Black Dates 250g",
     img: dates,
-    price: 280,
+    price: 130,
     stock: true,
   },
   {
@@ -65,7 +66,7 @@ const dryFruites = [
   },
   {
     title: "Dry Amla 250g",
-    img: imamla,
+    img: amla,
     price: 450,
     stock: true,
   },
@@ -97,6 +98,12 @@ const dryFruites = [
     title: "Apricot 150g",
     img: apricut,
     price: 200,
+    stock: true,
+  },
+  {
+    title: "Honey Figs 150g",
+    img: honeyfig,
+    price: 500,
     stock: true,
   },
   
