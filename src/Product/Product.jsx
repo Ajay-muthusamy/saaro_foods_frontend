@@ -81,7 +81,7 @@ const dryFruites = [
   },
   {
     title: "Kiwi 250g",
-    img: honeydryfruits,
+    img: imamla,
     price: 500,
     stock: true,
   },  
