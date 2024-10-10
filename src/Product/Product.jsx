@@ -20,6 +20,8 @@ import almond from "../assets/almond.png";
 import blackgraps from "../assets/blackgraps.png";
 import greenpista from "../assets/GREENPISTA.png";
 import imamla from "../assets/imAMLA.png";
+import amla from "../assets/AMLA.png";
+import apricut from "../assets/APRICUT.png";
 
 
 const MAX_PRODUCTS = 6;
@@ -39,7 +41,7 @@ const dryFruites = [
   },
   {
     title: "Black Dates 250g",
-    img: cashewnuts,
+    img: dates,
     price: 280,
     stock: true,
   },
@@ -93,7 +95,7 @@ const dryFruites = [
   },
   {
     title: "Apricot 150g",
-    img: walnut,
+    img: apricut,
     price: 200,
     stock: true,
   },
@@ -190,12 +192,12 @@ const Product = () => {
 
       <div className="flex justify-center gap-5 text-center mt-20 sticky top-0 md:mt-[13vh] font-rubik p-4 bg-white  z-50">
         <div className="px-10 py-4 rounded-md border-2">
-          <h1 className="font-poppins font-semibold text-1xl">No. of Sweet</h1>
-          <h2>{upQuantity}</h2>
+          <h1 className="font-poppins font-semibold text-1xl">No. of Products</h1>
+          <h2 className="text-2xl">{upQuantity}</h2>
         </div>
         <div className="px-10 py-4 rounded-md border-2">
           <h1 className="font-poppins font-semibold text-1xl">Total Amount</h1>
-          <h2>₹ : {total}</h2>
+          <h2 className="text-2xl">₹ : {total}</h2>
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";  
+import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 
 // OrderForm Component
 const OrderForm = ({ isOpen, onClose, products, total }) => {
-  
   const [name, setName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [landMark, setLandmark] = useState("");
@@ -186,8 +185,12 @@ const PreviewOrder = () => {
     setModalOpen(false);
   };
   const handleBackClick = () => {
-    navigate('/')
+    navigate("/");
     dispatch(clearProducts());
+  };
+
+  const handleMore = () => {
+    navigate("/");
   };
 
   return (
@@ -195,43 +198,55 @@ const PreviewOrder = () => {
       <h2 className="text-2xl font-semibold text-center mb-4">
         Preview Your Sweet Box
       </h2>
-
       <div className="flex justify-center">
-        <div className="overflow-hidden rounded-md shadow-md w-[90vh]">
-          {products.length === 0 ? (
-            <p className="text-center text-gray-500">No products added yet.</p>
-          ) : (
-            <div className="grid grid-cols-2 gap-4">
-              {products.map((product, index) => (
-                <motion.div
-                  key={index}
-                  className="flex flex-col items-center justify-between border p-4 rounded-md bg-white shadow hover:shadow-lg transition-shadow duration-300"
-                  initial={{ opacity: 0, translateY: -20 }}
-                  animate={{ opacity: 1, translateY: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <img
-                    src={product.img}
-                    alt={product.title}
-                    className="w-full h-32 object-cover rounded-md mb-2"
-                  />
-                  <div className="text-center">
-                    <h3 className="font-medium">{product.title}</h3>
-                    <p>Price: ₹{product.price}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          )}
+        <div>
+          <div className="overflow-hidden rounded-md shadow-md w-[90vh]">
+            {products.length === 0 ? (
+              <p className="text-center text-gray-500">
+                No products added yet.
+              </p>
+            ) : (
+              <div className="grid grid-cols-2 gap-4">
+                {products.map((product, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex flex-col items-center justify-between border p-4 rounded-md bg-white shadow hover:shadow-lg transition-shadow duration-300"
+                    initial={{ opacity: 0, translateY: -20 }}
+                    animate={{ opacity: 1, translateY: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <img
+                      src={product.img}
+                      alt={product.title}
+                      className="w-full h-32 object-cover rounded-md mb-2"
+                    />
+                    <div className="text-center">
+                      <h3 className="font-medium">{product.title}</h3>
+                      <p>Price: ₹{product.price}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="flex justify-center">
+            <button
+              onClick={handleMore}
+              className="bg-yellow-500 text-white rounded-md px-16 py-3 mt-2"
+            >
+              +Add More
+            </button>
+          </div>
         </div>
       </div>
+
       {products.length > 0 && (
         <h3 className="mt-4 font-semibold  text-center text-3xl">
           Total: ₹{total}
         </h3>
       )}
       <div className="flex justify-center mt-5 gap-4">
-      <button
+        <button
           onClick={handleBackClick}
           className="bg-red-500 text-white rounded-md px-4 py-2"
         >
