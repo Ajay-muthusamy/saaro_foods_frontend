@@ -49,13 +49,13 @@ const dryFruites = [
   {
     title: "Cashewnuts 250g",
     img: cashewnuts,
-    price: 280,
+    price: 300,
     stock: true,
   },
   {
     title: "Dry Grapes 250g",
     img: graps,
-    price: 150,
+    price: 160,
     stock: true,
   },
   {
@@ -67,7 +67,7 @@ const dryFruites = [
   {
     title: "Dry Amla 250g",
     img: amla,
-    price: 450,
+    price: 160,
     stock: true,
   },
   {
@@ -91,13 +91,13 @@ const dryFruites = [
   {
     title: "Walnut 150g",
     img: walnut,
-    price: 280,
+    price: 240,
     stock: true,
   },
   {
     title: "Apricot 150g",
     img: apricut,
-    price: 200,
+    price: 350,
     stock: true,
   },
   {
