@@ -38,6 +38,12 @@ const dryFruites = [
     stock: true,
   },
   {
+    title: "Black Dates 250g",
+    img: cashewnuts,
+    price: 280,
+    stock: true,
+  },
+  {
     title: "Cashewnuts 250g",
     img: cashewnuts,
     price: 280,
@@ -50,21 +56,15 @@ const dryFruites = [
     stock: true,
   },
   {
-    title: "Honey Dry Fruits 500g",
-    img: honeydryfruits,
-    price: 500,
+    title: "Sliced Dry figs 250g",
+    img: fig,
+    price: 450,
     stock: true,
   },
   {
-    title: "Karonda Candy 300g",
-    img: karondacandy,
-    price: 140,
-    stock: true,
-  },
-  {
-    title: "Mix Nuts 250g ",
-    img: mixednuts,
-    price: 350,
+    title: "Dry Amla 250g",
+    img: imamla,
+    price: 450,
     stock: true,
   },
   {
@@ -76,21 +76,28 @@ const dryFruites = [
   {
     title: "Pistha green 250g",
     img: greenpista,
-    price: 450,
+    price: 650,
     stock: true,
   },
+  {
+    title: "Kiwi 250g",
+    img: honeydryfruits,
+    price: 500,
+    stock: true,
+  },  
   {
     title: "Walnut 150g",
     img: walnut,
-    price: 150,
+    price: 280,
     stock: true,
   },
   {
-    title: "Sliced Dry figs 250g",
-    img: fig,
-    price: 450,
+    title: "Apricot 150g",
+    img: walnut,
+    price: 200,
     stock: true,
   },
+  
 ];
 
 const Product = () => {
