@@ -31,7 +31,7 @@ const OrderButton = ({ onClick }) => {
 
   return (
     <motion.button
-      className="bg-blue-500 text-white font-bold py-2 px-4 rounded shadow-lg"
+      className="bg-blue-500 text-white font-bold py-3 px-12 rounded-full shadow-lg mb-5"
       onClick={onClick}
       variants={buttonVariants}
       initial="rest"

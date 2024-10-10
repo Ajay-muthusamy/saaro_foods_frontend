@@ -19,7 +19,6 @@ const productSlice = createSlice({
     clearProducts: (state) => {
       state.products = [];
       state.total = 0;
-      console.log('Products cleared. Current products:', state.products); 
     },
   },
 });

@@ -5,97 +5,94 @@ import OrderButton from "../components/button/OrderButton";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import banner from '../assets/banner1.png'
-import logo from '../assets/logo.jpg'
-import cashewnuts from '../assets/cashewnuts.png'
-import dates from '../assets/dates.png'
-import fig from '../assets/fig.png'
-import graps from '../assets/graps.png'
-import honeydryfruits from '../assets/honeydryfruits.png'
-import karondacandy from '../assets/karondacandy.png'
-import mixednuts from '../assets/mixednuts.png'
-import pista from '../assets/pista.png'
-import walnut from '../assets/walnut.png'
+import banner from "../assets/banner1.png";
+import logo from "../assets/logo.jpg";
+import cashewnuts from "../assets/cashewnuts.png";
+import dates from "../assets/dates.png";
+import fig from "../assets/fig.png";
+import graps from "../assets/graps.png";
+import honeydryfruits from "../assets/honeydryfruits.png";
+import karondacandy from "../assets/karondacandy.png";
+import mixednuts from "../assets/mixednuts.png";
+import pista from "../assets/pista.png";
+import walnut from "../assets/walnut.png";
 
 const MAX_PRODUCTS = 6;
 
 const dryFruites = [
   {
-      "title":"Arabian Black Dates 250g",
-      "img":dates,
-      "price":130,
-      "stock":true
-
+    title: "Arabian Black Dates 250g",
+    img: dates,
+    price: 130,
+    stock: true,
   },
   {
-      "title":"Almonds 250g",
-      "img":"https://tse2.mm.bing.net/th?id=OIP.KCUewIhJxFw9mF1RFdxHjwHaE8&pid=Api&P=0&h=180",
-      "price":300,
-      "stock":true
-
+    title: "Almonds 250g",
+    img: "https://tse2.mm.bing.net/th?id=OIP.KCUewIhJxFw9mF1RFdxHjwHaE8&pid=Api&P=0&h=180",
+    price: 300,
+    stock: true,
   },
   {
-      "title":"Black Dry Grapes 250g",
-      "img":"https://www.verywellfit.com/thmb/4bomU_FllAm-OlICUZOkzoOxJSk=/2116x1416/filters:fill(FFDB5D,1)/DriedfruitRosetteJordaan-5b2322db954f4a6b8986bc4e722351e1.jpg",
-      "price":170,
-      "stock":true
+    title: "Black Dry Grapes 250g",
+    img: "https://www.verywellfit.com/thmb/4bomU_FllAm-OlICUZOkzoOxJSk=/2116x1416/filters:fill(FFDB5D,1)/DriedfruitRosetteJordaan-5b2322db954f4a6b8986bc4e722351e1.jpg",
+    price: 170,
+    stock: true,
   },
   {
-      "title":"Cashewnuts 250g",
-      "img":cashewnuts,
-      "price":280,
-      "stock":true
+    title: "Cashewnuts 250g",
+    img: cashewnuts,
+    price: 280,
+    stock: true,
   },
   {
-      "title":"Dry Grapes 250g",
-      "img":graps,
-      "price":150,
-      "stock":true
+    title: "Dry Grapes 250g",
+    img: graps,
+    price: 150,
+    stock: true,
   },
   {
-      "title":"Dry Fig Sliced 250g",
-      "img":fig,
-      "price":450,
-      "stock":true
+    title: "Dry Fig Sliced 250g",
+    img: fig,
+    price: 450,
+    stock: true,
   },
   {
-      "title":"Honey Dry Fruits 500g",
-      "img":honeydryfruits,
-      "price":500,
-      "stock":true
+    title: "Honey Dry Fruits 500g",
+    img: honeydryfruits,
+    price: 500,
+    stock: true,
   },
   {
-      "title":"Honey Figs 500g",
-      "img":"https://images.eatsmarter.com/sites/default/files/styles/max_size/public/honey-figs-with-mascarpone-528272.jpg",
-      "price":500,
-      "stock":true
+    title: "Honey Figs 500g",
+    img: "https://images.eatsmarter.com/sites/default/files/styles/max_size/public/honey-figs-with-mascarpone-528272.jpg",
+    price: 500,
+    stock: true,
   },
   {
-      "title":"Karonda Candy 300g",
-      "img":karondacandy,
-      "price":140,
-      "stock":true
+    title: "Karonda Candy 300g",
+    img: karondacandy,
+    price: 140,
+    stock: true,
   },
   {
-      "title":"Mix Nuts 250g ",
-      "img":mixednuts,
-      "price":350,
-      "stock":true
+    title: "Mix Nuts 250g ",
+    img: mixednuts,
+    price: 350,
+    stock: true,
   },
   {
-      "title":"Pistha Salted 250g",
-      "img":pista,
-      "price":450,
-      "stock":true
+    title: "Pistha Salted 250g",
+    img: pista,
+    price: 450,
+    stock: true,
   },
   {
-      "title":"Walnut 150g",
-      "img":walnut,
-      "price":150,
-      "stock":true
-  }
-]
-
+    title: "Walnut 150g",
+    img: walnut,
+    price: 150,
+    stock: true,
+  },
+];
 
 const Product = () => {
   const navigate = useNavigate();
@@ -107,6 +104,8 @@ const Product = () => {
   const [alertOpen, setAlertOpen] = useState(false);
   const [total, setTotal] = useState(0);
   const [productQuantities, setProductQuantities] = useState({});
+
+  const [upQuantity, setUpQuantity] = useState(0);
 
   const handleOpenModal = (data) => {
     setImage(data);
@@ -122,34 +121,48 @@ const Product = () => {
     setImage(null);
   };
 
-  const DataHandle = (data) => {
-    if (products.length >= MAX_PRODUCTS) {
-      setAlertOpen(true);
-      return;
-    }
+  const DataHandle = (data, action) => {
+    let quantity = productQuantities[data.title] || 0;
 
-    setProducts((prevProducts) => [...prevProducts, data]);
-    setTotal((prevTotal) => prevTotal + data.price);
+    if (action === "increment") {
+      if (products.length >= MAX_PRODUCTS) {
+        setAlertOpen(true);
+        return;
+      }
+      quantity += 1;
+      setUpQuantity(upQuantity + 1);
+      setTotal((prevTotal) => prevTotal + data.price);
+      setProducts((prevProducts) => [...prevProducts, data]);
+      dispatch(addProduct(data));
+    } else if (action === "decrement" && quantity > 0) {
+      quantity -= 1;
+      setUpQuantity(upQuantity - 1);
+      setTotal((prevTotal) => prevTotal - data.price);
+      setProducts((prevProducts) =>
+        prevProducts.filter((product) => product.title !== data.title)
+      );
+    }
 
     setProductQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [data.title]: (prevQuantities[data.title] || 0) + 1,
+      [data.title]: quantity,
     }));
 
-    dispatch(addProduct(data));
-    toast.success(`${data.title} added successfully!`, {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    if (action === "increment") {
+      toast.success(`${data.title} added successfully!`, {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
   };
 
   const handleSubmit = () => {
-    if (products.length >= MAX_PRODUCTS) {
+    if (products.length == MAX_PRODUCTS) {
       navigate("/preview-box");
     } else {
       return;
@@ -169,8 +182,19 @@ const Product = () => {
         </div>
       </div>
 
+      <div className="flex justify-center gap-5 text-center mt-20 sticky top-0 md:mt-[13vh] font-rubik p-4 bg-white  z-50">
+        <div className="px-10 py-4 rounded-md border-2">
+          <h1 className="font-poppins font-semibold text-1xl">No. of Sweet</h1>
+          <h2>{upQuantity}</h2>
+        </div>
+        <div className="px-10 py-4 rounded-md border-2">
+          <h1 className="font-poppins font-semibold text-1xl">Total Amount</h1>
+          <h2>₹ : {total}</h2>
+        </div>
+      </div>
+
       <div>
-        <div className="flex justify-center mt-20 md:mt-28 font-rubik">
+        <div className="flex justify-center mt-3 font-rubik">
           <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
             {dryFruites.map((data, index) => (
               <div
@@ -185,20 +209,28 @@ const Product = () => {
                 />
                 <div>
                   <h1 className="text-lg font-semibold mb-2">{data.title}</h1>
-                  <h1 className="text-md font-medium mb-2">Price: ₹{data.price}</h1>
+                  <h1 className="text-md font-medium mb-2">
+                    Price: ₹{data.price}
+                  </h1>
 
                   <div className="flex space-x-2 items-center rounded-lg">
                     <button
-                      className="bg-green-500 text-white hover:bg-green-300 font-semibold py-2 px-10 rounded-full"
-                      onClick={() => DataHandle(data)}
+                      className="bg-green-500 text-white hover:bg-green-300 font-semibold py-2 px-4 rounded-full"
+                      onClick={() => DataHandle(data, "increment")}
                     >
-                      Add
+                      +
                     </button>
                     <div>
                       <h1 className="bg-green-500 px-5 py-2 rounded-full text-white">
                         {productQuantities[data.title] || 0}
                       </h1>
                     </div>
+                    <button
+                      className="bg-green-500 text-white hover:bg-green-300 font-semibold py-2 px-4 rounded-full"
+                      onClick={() => DataHandle(data, "decrement")}
+                    >
+                      -
+                    </button>
                   </div>
                 </div>
                 {!data.stock ? (
@@ -239,29 +271,24 @@ const Product = () => {
 
       {alertOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg relative">
-            <button
-              className="absolute top-2 right-2 text-black font-bold text-xl"
-              onClick={handleCloseAlert}
-            >
-              &times;
-            </button>
-            <h1 className="text-center text-lg font-semibold">
-              You can only add up to 6 products.
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h1 className="text-red-600 text-lg mb-4">
+              Maximum of {MAX_PRODUCTS} products allowed!
             </h1>
-            <div className="mt-4 flex justify-center">
-              <button
-                className="bg-blue-500 text-white px-4 py-2 rounded"
-                onClick={handleCloseAlert}
-              >
-                Close
-              </button>
-            </div>
+            <button
+              onClick={handleCloseAlert}
+              className="bg-blue-500 hover:bg-blue-300 text-white font-semibold py-2 px-4 rounded-lg"
+            >
+              Close
+            </button>
           </div>
         </div>
       )}
-      <div className="flex justify-center my-5">
-        <OrderButton onClick={handleSubmit} />
+
+      <div className="flex justify-center mt-8">
+        <OrderButton onClick={handleSubmit} disabled={products.length === 0}>
+          Preview Box
+        </OrderButton>
       </div>
       <ToastContainer />
     </section>

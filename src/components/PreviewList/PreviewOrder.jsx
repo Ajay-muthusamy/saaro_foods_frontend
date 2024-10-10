@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";  
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { clearProducts } from "../../slice/ProductSlice";
 import { useNavigate } from "react-router-dom";
 
 // OrderForm Component
 const OrderForm = ({ isOpen, onClose, products, total }) => {
-  const navigate = useNavigate();
+  
   const [name, setName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [landMark, setLandmark] = useState("");
@@ -25,7 +27,7 @@ const OrderForm = ({ isOpen, onClose, products, total }) => {
     } else if (!/^\d{10}$/.test(phoneNo)) {
       newErrors.phoneNo = "Enter a valid 10-digit phone number";
     }
-    if (!landMark.trim()) newErrors.landMark = "Landmark is required";
+    if (!landMark.trim()) newErrors.landMark = "Pincode is required";
     if (!address.trim()) newErrors.address = "Address is required";
     return newErrors;
   };
@@ -75,7 +77,6 @@ const OrderForm = ({ isOpen, onClose, products, total }) => {
     } catch (error) {
       console.error("Error sending order:", error);
 
-      // Show error notification
       toast.error("Failed to place order. Please try again later.", {
         position: "top-right",
         autoClose: 3000,
@@ -123,7 +124,7 @@ const OrderForm = ({ isOpen, onClose, products, total }) => {
             )}
           </div>
           <div className="mb-4">
-            <label className="block mb-1">Landmark</label>
+            <label className="block mb-1">Pincode </label>
             <input
               type="text"
               value={landMark}
@@ -171,6 +172,8 @@ const OrderForm = ({ isOpen, onClose, products, total }) => {
 };
 
 const PreviewOrder = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const products = useSelector((state) => state.products.products);
   const total = useSelector((state) => state.products.total);
   const [isModalOpen, setModalOpen] = useState(false);
@@ -181,6 +184,10 @@ const PreviewOrder = () => {
 
   const handleCloseModal = () => {
     setModalOpen(false);
+  };
+  const handleBackClick = () => {
+    navigate('/')
+    dispatch(clearProducts());
   };
 
   return (
@@ -223,7 +230,13 @@ const PreviewOrder = () => {
           Total: ₹{total}
         </h3>
       )}
-      <div className="flex justify-center mt-5">
+      <div className="flex justify-center mt-5 gap-4">
+      <button
+          onClick={handleBackClick}
+          className="bg-red-500 text-white rounded-md px-4 py-2"
+        >
+          Back
+        </button>
         <button
           onClick={handleOpenModal}
           className="bg-green-500 text-white rounded-md px-4 py-2"
