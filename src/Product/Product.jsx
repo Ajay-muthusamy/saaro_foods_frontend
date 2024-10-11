@@ -23,6 +23,7 @@ import imamla from "../assets/imAMLA.png";
 import amla from "../assets/AMLA.png";
 import apricut from "../assets/APRICUT.png";
 import honeyfig from "../assets/honeyfig.png";
+import greenpista2 from "../assets/greenpista2.png";
 
 
 const MAX_PRODUCTS = 6;
@@ -78,7 +79,7 @@ const dryFruites = [
   },
   {
     title: "Pistha green 250g",
-    img: greenpista,
+    img: greenpista2,
     price: 650,
     stock: true,
   },
