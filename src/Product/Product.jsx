@@ -85,7 +85,7 @@ const dryFruites = [
   {
     title: "Kiwi 250g",
     img: imamla,
-    price: 500,
+    price: 240,
     stock: true,
   },  
   {
@@ -95,7 +95,7 @@ const dryFruites = [
     stock: true,
   },
   {
-    title: "Apricot 150g",
+    title: "Apricot 250g",
     img: apricut,
     price: 350,
     stock: true,
