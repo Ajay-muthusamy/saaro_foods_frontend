@@ -200,13 +200,13 @@ const PreviewOrder = () => {
       </h2>
       <div className="flex justify-center">
         <div>
-          <div className="overflow-hidden rounded-md shadow-md w-[90vh]">
+          <div className="overflow-hidden rounded-md shadow-md md:w-[90vh]">
             {products.length === 0 ? (
               <p className="text-center text-gray-500">
                 No products added yet.
               </p>
             ) : (
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 ">
                 {products.map((product, index) => (
                   <motion.div
                     key={index}
@@ -232,7 +232,7 @@ const PreviewOrder = () => {
           <div className="flex justify-center">
             <button
               onClick={handleMore}
-              className="bg-yellow-500 text-white rounded-md px-16 py-3 mt-2"
+              className="bg-blue-500 text-white rounded-md px-16 py-3 mt-2"
             >
               +Add More
             </button>

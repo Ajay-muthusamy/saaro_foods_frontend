@@ -204,6 +204,7 @@ const Product = () => {
           <h2 className="text-2xl">{upQuantity}</h2>
         </div>
         <div className="px-10 py-4 rounded-md border-2">
+          <h1>15% Offer </h1>
           <h1 className="font-poppins font-semibold text-1xl">Total Amount</h1>
           <h2 className="text-2xl">₹ : {total}</h2>
         </div>
