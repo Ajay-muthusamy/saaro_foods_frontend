@@ -219,7 +219,7 @@ const PreviewOrder = () => {
                     <img
                       src={product.img}
                       alt={product.title}
-                      className="w-full h-32 object-cover rounded-md mb-2"
+                      className="w-full h-56 object-cover rounded-md mb-2"
                     />
                     <div className="text-center">
                       <h3 className="font-medium">{product.title}</h3>
