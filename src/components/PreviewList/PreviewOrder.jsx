@@ -51,6 +51,7 @@ const OrderForm = ({ isOpen, onClose, products, total }) => {
       products,
       total,
     };
+    // https://saroma-foods-backend-2.onrender.com/saarofoods/customer-order
     try {
       const response = await axios.post(
         "https://saroma-foods-backend-2.onrender.com/saarofoods/customer-order",

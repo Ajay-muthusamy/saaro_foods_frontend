@@ -187,6 +187,10 @@ const Product = () => {
 
   return (
     <section>
+      <div className="flex justify-center items-center">
+        <img src="https://static.vecteezy.com/system/resources/previews/019/017/427/original/fssai-logo-transparent-free-png.png" alt="" className="w-24"/>
+        <h1 className="font-poppins text-2xl mt-2">12423018001552</h1>
+      </div>
       <div className="relative">
         <img src={banner} alt="Logo" className="w-full" />
         <div className="absolute inset-0 flex items-center justify-center">
